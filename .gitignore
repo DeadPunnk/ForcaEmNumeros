@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+__marimo__
+data/
+*.csv
+*.parquet
+exp_open_powerlifting.py
+main.py
+dataa/openpowerlifting-2026-09-19-ed07773f.csv
+# Virtual environments
+.venv
+
+
