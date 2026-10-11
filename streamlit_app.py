@@ -14,6 +14,25 @@ st.set_page_config(
     layout="wide"
 )
 
+col_icone, col_titulo = st.columns([1, 20])
+
+with col_icone:
+    # Ajuste o width para ficar do tamanho ideal da fonte do título
+    st.image("img/agacho-icon.jpeg", width=45) 
+
+with col_titulo:
+    st.title("Estatísticas de peso")
+    st.info(
+    "**Fonte dos Dados:** Esta página utiliza dados do projeto [OpenPowerlifting](https://www.openpowerlifting.org). "
+    "Você pode baixar uma cópia dos dados originais em [gitlab.com/openpowerlifting/opl-data](https://gitlab.com/openpowerlifting/opl-data)."
+)
+
+    st.markdown("""
+        ## O objetivo do projeto é a visualização e exploração dos dados de Powerlifters que foram cadastrados no OpenPowerlifting
+        Para feedback responda esse formulário: :point_right: [Formulário para FeedBack](https://docs.google.com/forms/d/e/1FAIpQLSfUupaye1Iqo9Ck4Kboc9sjt7zwY_cGpIMAT_n2FPGpAIYi4Q/viewform?usp=header) :point_left:
+
+        """)
+
 # ==========================================
 # Download Obrigatório dos Dados
 # ==========================================
