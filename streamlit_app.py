@@ -3,6 +3,7 @@ import duckdb
 import altair as alt
 import pandas as pd
 import urllib.request
+import os
 
 # 1. Configurações Iniciais
 duckdb.execute("SET memory_limit = '600MB';")
@@ -18,12 +19,10 @@ def preparar_banco_dados():
     os.makedirs("data", exist_ok=True)
     caminho_local = "data/openpowerlifting.parquet"
     
-    url_gcp = "https://storage.googleapis.com/dataforcaemnumeros/openpowerlifting.parquet"
+    url_ = os.getenv("URL_DADOS")
     
     # Baixa o arquivo apenas se ele não existir no disco do servidor
-    if not os.path.exists(caminho_local):
-        urllib.request.urlretrieve(url_gcp, caminho_local)
-        
+    
     return True
 
 col_icone, col_titulo = st.columns([1, 20])
