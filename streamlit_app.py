@@ -176,7 +176,7 @@ def renderizar_visao_categoria(mod, sex):
     with col_cat1:
         categoria_peso = st.selectbox(
             "Selecione a Categoria de Peso (Kg)",
-            ["52", "56", "60", "67.5", "75", "82.5", "90", "100", "110", "125", "140", "140+"],
+            ["43", "47", "52", "54", "56", "60", "63", "66","67.5", "69","74","75", "76", "82.5", "83", "84", "84+","90", "93","100", "110", "120", "120+","125", "140", "140+"],
             index=1 # Mantém os 56kg selecionados por padrão
         )
     with col_cat2:
